@@ -105,7 +105,7 @@ const fi = (function() {
         }
       }
       return newArr
-    }
+    },
 
     functions: function() {
 
