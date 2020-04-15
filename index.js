@@ -19,7 +19,7 @@ const fi = (function() {
     },
 
     reduce: function(collection, callback, acc) {
-      newCollection = [...collection]
+      let newCollection = [...collection]
       let pointer = (acc) ? acc : newCollection.shift();
       for(let i = 0; i < newCollection.length; i++){
         pointer = callback(pointer, newCollection[i])
