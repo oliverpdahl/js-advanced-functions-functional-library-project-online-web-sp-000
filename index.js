@@ -97,7 +97,11 @@ const fi = (function() {
       newArr = []
       if(shallow){
         for(const i of array){
-          newArr.concat((i instanceof Array) ? ...i : i)
+          if(i instanceof Array){
+            newArr.concat(...i);
+          } else {
+            newArr.concat(i)
+          }
         }
       }
       return newArr
