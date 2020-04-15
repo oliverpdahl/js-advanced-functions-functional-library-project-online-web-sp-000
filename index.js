@@ -130,7 +130,7 @@ const fi = (function() {
     },
 
     keys: function(object){
-      arr = []
+      let arr = []
       for(const key in obj){
         arr.push(obj[key])
       }
