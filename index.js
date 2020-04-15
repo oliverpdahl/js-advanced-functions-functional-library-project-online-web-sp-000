@@ -28,6 +28,8 @@ const fi = (function() {
     },
 
     find: function(collection, predicate){
+      const newCollection = (collection instanceof Array) ? [...collection] : Object.values(collection)
+      for(const i of newCollection){ callback(i)}
       let returnTrue = function(i){
         if(i === predicate){
           return i
