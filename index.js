@@ -28,7 +28,7 @@ const fi = (function() {
     },
 
     find: function(collection, predicate){
-      let returnTrue = function(){
+      let returnTrue = function(i){
         if i === predicate{
           return i
         }
