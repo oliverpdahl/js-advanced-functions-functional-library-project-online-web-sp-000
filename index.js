@@ -118,7 +118,7 @@ const fi = (function() {
           let changedVal = callback(val)
           if(!changedVals.has(changedVal)){
             changedVals.add(changedVal)
-            uniqVals.add(val)
+            uniqVals.add(i)
           }
         }
         return Array.from(uniqVals)
