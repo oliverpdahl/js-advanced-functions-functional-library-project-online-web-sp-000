@@ -104,10 +104,17 @@ const fi = (function() {
       return newArr
     },
 
+    uniq: function(array, isSorted, callback){
+      let newArr = []
+      let sortedArray = []
+      if(!isSorted){
+        sortedArray = this.sort(array)
+      }
+    },
+
     functions: function() {
 
     },
-
 
   }
 })()
