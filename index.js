@@ -77,6 +77,15 @@ const fi = (function() {
       }
     },
 
+    compact: function(array){
+      const newCollection = (collection instanceof Array) ? [...collection] : Object.values(collection)
+      for(const i of newCollection){
+        if(number){
+          return newCollection.slice(-number)
+        }
+      }
+    }
+
     functions: function() {
 
     },
