@@ -39,7 +39,7 @@ const fi = (function() {
       return value
     },
 
-    filter: functiob(collection, predicate){
+    filter: function(collection, predicate){
       const newCollection = (collection instanceof Array) ? [...collection] : Object.values(collection)
       let value = []
       for(let i = 0; i < newCollection.length; i++){
