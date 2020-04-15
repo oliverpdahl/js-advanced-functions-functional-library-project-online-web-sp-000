@@ -79,11 +79,13 @@ const fi = (function() {
 
     compact: function(array){
       const newCollection = (collection instanceof Array) ? [...collection] : Object.values(collection)
+      let noFalse = []
       for(const i of newCollection){
-        if(number){
-          return newCollection.slice(-number)
+        if(i){
+          noFalse.push(i)
         }
       }
+      return noFalse
     }
 
     functions: function() {
