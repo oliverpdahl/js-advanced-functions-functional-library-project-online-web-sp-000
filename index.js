@@ -108,7 +108,7 @@ const fi = (function() {
       let newArr = []
       let sortedArray = [...array]
       if(!isSorted){
-        sortedArray = this.sortBy(sortedArray, i => i)
+        sortedArray = sort(sortedArray)
       }
       for(let i = 1; i < sortedArray.length; i++){
         if (newArr[i-1] !== sortedArray[i]) newArr.push(sortedArray[i])
