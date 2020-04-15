@@ -113,6 +113,7 @@ const fi = (function() {
       for(let i = 1; i < sortedArray.length; i++){
         if (sortedArray[i-1] !== sortedArray[i]) newArr.push(sortedArray[i])
       }
+      console.log(newArr)
       return newArr
     },
 
