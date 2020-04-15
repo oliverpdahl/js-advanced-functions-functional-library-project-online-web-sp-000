@@ -73,7 +73,7 @@ const fi = (function() {
         return newCollection.slice(-number)
       }
       else {
-        return newCollection[-1]
+        return newCollection.slice(-1)[0]
       }
     },
 
