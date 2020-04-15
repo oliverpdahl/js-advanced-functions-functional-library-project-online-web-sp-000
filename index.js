@@ -86,7 +86,7 @@ const fi = (function() {
         }
       }
       return noFalse
-    }
+    },
 
     functions: function() {
 
