@@ -135,7 +135,7 @@ const fi = (function() {
         arr.push(obj[key])
       }
       return arr
-    }
+    },
 
     functions: function() {
 
