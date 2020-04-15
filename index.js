@@ -94,7 +94,7 @@ const fi = (function() {
 
     flatten: function(array, shallow){
       const newCollection = (array instanceof Array) ? [...array] : Object.values(array)
-      newArr = []
+      let newArr = []
       if(shallow){
         for(const i of array){
           if(i instanceof Array){
