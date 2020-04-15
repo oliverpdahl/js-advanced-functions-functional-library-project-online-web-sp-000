@@ -107,13 +107,15 @@ const fi = (function() {
     uniq: function(array, isSorted=false, callback=false){
       let newArr = [array[0]]
       let sortedArray = [...array]
+      let dumbyArray = [...sortedArray]
       sortedArray = Array.from(new Set(array))
       if(!isSorted){
         sortedArray = sortedArray.sort(function(a,b) {return a - b})
+        dumbyArray = [...sortedArray]
       }
       let modifiedArray = [...sortedArray]
       if(callback){
-        modifiedArray = fi.map(sortedArray, callback)
+        modifiedArray = fi.map(dumbyArray, callback)
         modifiedArray = modifiedArray.sort(function(a,b) {return a - b})
       }
       for(let i = 1; i < sortedArray.length; i++){
