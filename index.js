@@ -32,6 +32,7 @@ const fi = (function() {
       let returnTrue = function(i){
         if(i === predicate){
           return i
+          break;
         }
       }
       for(const i of newCollection){ returnTrue(i)}
