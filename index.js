@@ -111,10 +111,12 @@ const fi = (function() {
       if(!isSorted){
         sortedArray = sortedArray.sort(function(a,b) {return a - b})
       }
-      for(let i = 1; i < sortedArray.length; i++){
-        if (sortedArray[i-1] !== sortedArray[i]) newArr.push(sortedArray[i])
+      if(iteratee){
+        sortedArray = fi.map(array, callback)
       }
-      console.log(newArr)
+      for(let i = 1; i < sortedArray.length; i++){
+        if (sortedArray[i-1] !== sortedArray[i]) newArr.push(array[i])
+      }
       return newArr
     },
 
