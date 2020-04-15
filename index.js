@@ -115,7 +115,7 @@ const fi = (function() {
         let changedVals = new Set()
         let uniqVals = new Set()
         for(let i of array){
-          let changedVal = callback(val)
+          let changedVal = callback(i)
           if(!changedVals.has(changedVal)){
             changedVals.add(changedVal)
             uniqVals.add(i)
