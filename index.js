@@ -50,6 +50,13 @@ const fi = (function() {
       return value
     },
 
+    size: function(collection){
+      const newCollection = (collection instanceof Array) ? [...collection] : Object.values(collection)
+      let value = 0;
+      for(const i of newCollection){ value++}
+      return value
+    }
+
     functions: function() {
 
     },
