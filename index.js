@@ -110,8 +110,8 @@ const fi = (function() {
       if(!isSorted){
         sortedArray = this.sortBy(sortedArray, i => i)
       }
-      for(let i = 0; i < sortedArray.length; i++){
-        if (sortedArray[i-1] !== sortedArray[i]) newArr.push(sortedArray[i])
+      for(let i = 1; i < sortedArray.length; i++){
+        if (newArr[i-1] !== sortedArray[i]) newArr.push(sortedArray[i])
       }
       return newArr
     },
