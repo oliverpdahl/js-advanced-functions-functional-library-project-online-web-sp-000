@@ -122,7 +122,7 @@ const fi = (function() {
           }
         }
         newArr = Array.from(uniqVals)
-      } else {
+      } else{
         for(let i = 1; i < sortedArray.length; i++){
           if (modifiedArray[i-1] !== modifiedArray[i]) newArr.push(sortedArray[i])
         }
