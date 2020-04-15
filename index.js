@@ -110,7 +110,6 @@ const fi = (function() {
       sortedArray = Array.from(new Set(array))
       if(!isSorted){
         sortedArray = sortedArray.sort(function(a,b) {return a - b})
-        dumbyArray = [...sortedArray]
       } else if (callback) {
         let changedVals = new Set()
         let uniqVals = new Set()
