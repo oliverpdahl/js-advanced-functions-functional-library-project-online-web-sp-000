@@ -107,10 +107,11 @@ const fi = (function() {
     uniq: function(array, isSorted, callback){
       let newArr = [array[0]]
       let sortedArray = [...array]
+      sortedArray = Array.from(new Set(array))
       if(!isSorted){
         sortedArray = sortedArray.sort(function(a,b) {return a - b})
       }
-      sortedArray = Array.from(new Set(array))
+      
       for(let i = 1; i < sortedArray.length; i++){
         if (sortedArray[i-1] !== sortedArray[i]) newArr.push(sortedArray[i])
       }
