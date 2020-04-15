@@ -111,7 +111,7 @@ const fi = (function() {
       if(!isSorted){
         sortedArray = sortedArray.sort(function(a,b) {return a - b})
       }
-      if(iteratee){
+      if(callback){
         sortedArray = fi.map(array, callback)
       }
       for(let i = 1; i < sortedArray.length; i++){
