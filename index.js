@@ -129,6 +129,14 @@ const fi = (function() {
       return newArr
     },
 
+    keys: function(object){
+      arr = []
+      for(const key in obj){
+        arr.push(obj[key])
+      }
+      return arr
+    }
+
     functions: function() {
 
     },
