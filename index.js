@@ -111,25 +111,22 @@ const fi = (function() {
       if(!isSorted){
         sortedArray = sortedArray.sort(function(a,b) {return a - b})
         dumbyArray = [...sortedArray]
-      }
-      // let modifiedArray = [...sortedArray]
-      // if(callback){
-      //   modifiedArray = fi.map(dumbyArray, callback)
-      //   modifiedArray = modifiedArray.sort(function(a,b) {return a - b})
-      // }
-      for(let i = 1; i < sortedArray.length; i++){
-        if (modifiedArray[i-1] !== modifiedArray[i]) newArr.push(sortedArray[i])
-      }
-      let changedVals = new Set()
-      let uniqVals = new Set()
-      for(let i of array){
-        let changedVal = callback(val)
-        if(!changedVals.has(changedVal)){
-          changedVals.add(changedVal)
-          uniqVals.add(val)
+      } else if (callback) {
+        let changedVals = new Set()
+        let uniqVals = new Set()
+        for(let i of array){
+          let changedVal = callback(val)
+          if(!changedVals.has(changedVal)){
+            changedVals.add(changedVal)
+            uniqVals.add(val)
+          }
+        }
+        newArr = Array.from(uniqVals)
+      } else {
+        for(let i = 1; i < sortedArray.length; i++){
+          if (modifiedArray[i-1] !== modifiedArray[i]) newArr.push(sortedArray[i])
         }
       }
-      newArr = Array.from(uniqVals)
       return newArr
     },
 
