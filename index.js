@@ -7,6 +7,7 @@ const fi = (function() {
     each: function(collection, callback) {
       const newCollection = (collection instanceof Array) ? [...collection] : Object.values(collection)
       for(const i of newCollection){ callback(i)}
+      return collection
     },
 
     map: function() {
