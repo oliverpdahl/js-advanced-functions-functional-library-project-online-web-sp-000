@@ -120,6 +120,7 @@ const fi = (function() {
         if (modifiedArray[i-1] !== modifiedArray[i]) newArr.push(sortedArray[i])
       }
       console.log(modifiedArray)
+      console.log(newArr)
       return newArr
     },
 
