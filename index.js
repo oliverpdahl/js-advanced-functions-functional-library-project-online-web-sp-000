@@ -34,7 +34,7 @@ const fi = (function() {
           return i
         }
       }
-      for(const i of newCollection){ callback(i)}
+      for(const i of newCollection){ returnTrue(i)}
     },
 
     functions: function() {
