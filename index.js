@@ -150,6 +150,7 @@ const fi = (function() {
       for (let key in object){
         arr.push(key)
       }
+      return arr
     },
 
   }
