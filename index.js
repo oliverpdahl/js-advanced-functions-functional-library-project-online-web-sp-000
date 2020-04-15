@@ -108,10 +108,10 @@ const fi = (function() {
       let newArr = [array[0]]
       let sortedArray = [...array]
       sortedArray = Array.from(new Set(array))
-      let modifiedArray = [...sortedArray]
       if(!isSorted){
         sortedArray = sortedArray.sort(function(a,b) {return a - b})
       }
+      let modifiedArray = [...sortedArray]
       if(callback){
         modifiedArray = fi.map(sortedArray, callback)
       }
