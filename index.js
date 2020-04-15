@@ -111,7 +111,7 @@ const fi = (function() {
         sortedArray = this.sortBy(sortedArray, i => i)
       }
       for(let i = 0; i < sortedArray.length; i++){
-        if (sortedArray[i-1] !== sortedArray[i]) newArr.push(i)
+        if (sortedArray[i-1] !== sortedArray[i]) newArr.push(sortedArray[i])
       }
       return newArr
     },
