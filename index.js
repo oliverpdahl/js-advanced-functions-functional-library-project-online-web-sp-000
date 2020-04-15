@@ -100,7 +100,7 @@ const fi = (function() {
       } else {
         for(const i of array){
           if(i instanceof Array){
-            for(const j in flatten(Array)){
+            for(const j in flatten(array)){
               newArr.push(j)
             }
           } else {
