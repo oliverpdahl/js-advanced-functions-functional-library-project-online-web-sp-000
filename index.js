@@ -5,7 +5,7 @@ const fi = (function() {
     },
 
     each: function(collection, callback) {
-      for(const i in collection) {callback(i)}
+      for(const i of collection) {callback(i)}
     },
 
     map: function() {
