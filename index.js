@@ -132,6 +132,14 @@ const fi = (function() {
     keys: function(object){
       let arr = []
       for(const key in object){
+        arr.push(key)
+      }
+      return arr
+    },
+
+    values: function(object){
+      let arr = []
+      for(const key in object){
         arr.push(object[key])
       }
       return arr
