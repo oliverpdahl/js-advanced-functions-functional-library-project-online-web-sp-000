@@ -104,7 +104,7 @@ const fi = (function() {
       return newArr
     },
 
-    uniq: function(array, isSorted, callback){
+    uniq: function(array, isSorted=false, callback=false){
       let newArr = [array[0]]
       let sortedArray = [...array]
       sortedArray = Array.from(new Set(array))
