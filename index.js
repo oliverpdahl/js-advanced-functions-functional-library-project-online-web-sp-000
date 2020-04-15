@@ -118,7 +118,7 @@ const fi = (function() {
       for(let i = 1; i < sortedArray.length; i++){
         if (modifiedArray[i-1] !== modifiedArray[i]) newArr.push(sortedArray[i])
       }
-      console.log(newArr)
+      console.log(modifiedArray)
       return newArr
     },
 
