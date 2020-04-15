@@ -27,11 +27,13 @@ const fi = (function() {
       return pointer
     },
 
+    find: function(collection, predicate){
+      let returnTrue = i => i === predicate ? return i : false
+      collection.each(collection, returnTrue)
+    }
+
     functions: function() {
-      find: function(collection, predicate){
-        let returnTrue = i => i === predicate ? return i : false
-        collection.each(collection, returnTrue)
-      }
+
     },
 
 
