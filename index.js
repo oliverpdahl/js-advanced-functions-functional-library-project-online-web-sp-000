@@ -100,7 +100,7 @@ const fi = (function() {
           if(i instanceof Array){
             newArr.concat(...i);
           } else {
-            newArr.concat(i)
+            newArr.push(i)
           }
         }
       }
