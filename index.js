@@ -97,6 +97,16 @@ const fi = (function() {
       let newArr = []
       if(shallow){
         newArr = [].concat.apply([], array)
+      } else {
+        for(const i of array){
+          if(i instanceof Array){
+            for(const j in flatten(Array)){
+              yeild j;
+            }
+          } else {
+            yeild i;
+          }
+        }
       }
       return newArr
     },
