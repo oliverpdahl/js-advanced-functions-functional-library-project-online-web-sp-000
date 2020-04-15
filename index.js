@@ -36,6 +36,7 @@ const fi = (function() {
           break;
         }
       }
+      return value
     },
 
     functions: function() {
