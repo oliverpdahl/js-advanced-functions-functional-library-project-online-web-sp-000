@@ -31,7 +31,7 @@ const fi = (function() {
       const newCollection = (collection instanceof Array) ? [...collection] : Object.values(collection)
       let returnTrue = function(i){
         if(i === predicate){
-          return i;
+          // return i;
           break;
         }
       }
