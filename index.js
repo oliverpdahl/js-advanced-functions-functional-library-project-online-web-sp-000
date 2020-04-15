@@ -112,7 +112,7 @@ const fi = (function() {
         sortedArray = sortedArray.sort(function(a,b) {return a - b})
       }
       if(callback){
-        sortedArray = fi.map(array, callback)
+        sortedArray = fi.map(sortedArray, callback)
       }
       for(let i = 1; i < sortedArray.length; i++){
         if (sortedArray[i-1] !== sortedArray[i]) newArr.push(sortedArray[i])
