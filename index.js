@@ -145,8 +145,11 @@ const fi = (function() {
       return arr
     },
 
-    functions: function() {
-
+    functions: function(object) {
+      let arr = []
+      for (let key in object){
+        arr.push(key)
+      }
     },
 
   }
