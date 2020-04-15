@@ -20,8 +20,8 @@ const fi = (function() {
 
     reduce: function(collection, callback, acc) {
       let pointer = (acc) ? acc : 0;
-      for(const i of collection){
-        pointer = callback(pointer, i)
+      for(let i = 0; i < collection.length; i++){
+        pointer = callback(pointer, newCollection[i])
       }
       return pointer
     },
