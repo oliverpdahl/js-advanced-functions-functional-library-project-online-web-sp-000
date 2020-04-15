@@ -81,7 +81,7 @@ const fi = (function() {
       const newCollection = (collection instanceof Array) ? [...collection] : Object.values(collection)
       let noFalse = []
       for(const i of newCollection){
-        if(i){
+        if(Boolean(i)){
           noFalse.push(i)
         }
       }
