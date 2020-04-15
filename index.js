@@ -67,6 +67,16 @@ const fi = (function() {
       }
     },
 
+    last: function(collection, number){
+      const newCollection = (collection instanceof Array) ? [...collection] : Object.values(collection)
+      if(number){
+        return collection.slice(-1, number)
+      }
+      else {
+        return collection[-1]
+      }
+    },
+
     functions: function() {
 
     },
