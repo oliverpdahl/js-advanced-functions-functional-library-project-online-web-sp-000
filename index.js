@@ -148,7 +148,7 @@ const fi = (function() {
     functions: function(object) {
       let arr = []
       for (let key in object){
-        arr.push(key)
+        if(typeof object[key] === "function") arr.push(key)
       }
       return arr
     },
