@@ -22,7 +22,7 @@ const fi = (function() {
       let pointer = (acc) ? acc : 0;
       for(const i of collection){
         pointer = callback(pointer, i)
-      } 
+      }
       return pointer
     },
 
