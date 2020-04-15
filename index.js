@@ -92,6 +92,16 @@ const fi = (function() {
       return newArr.sort(function(a,b) {return callback(a)- callback(b)})
     },
 
+    flatten: function(array, shallow){
+      const newCollection = (collection instanceof Array) ? [...collection] : Object.values(collection)
+      newArr = []
+      if(shallow){
+        for(const i of array){
+          newArr.concat((i instanceof Array) ? ...i : i)
+        }
+      }
+    }
+
     functions: function() {
 
     },
