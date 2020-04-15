@@ -101,10 +101,10 @@ const fi = (function() {
         for(const i of array){
           if(i instanceof Array){
             for(const j in flatten(Array)){
-              yeild j;
+              newArr.push(j)
             }
           } else {
-            yeild i;
+            newArr.push(i)
           }
         }
       }
