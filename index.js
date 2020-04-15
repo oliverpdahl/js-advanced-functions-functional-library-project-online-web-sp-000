@@ -92,14 +92,15 @@ const fi = (function() {
       return newArr.sort(function(a,b) {return callback(a)- callback(b)})
     },
 
-    flatten: function(array, shallow, newArr=[]){
+    flatten: function(array, shallow){
       const newCollection = (array instanceof Array) ? [...array] : Object.values(array)
+      newArr = []
       if(shallow){
         newArr = [].concat.apply([], newCollection)
       } else {
         for(let i in array){
           if(i instanceof Array){
-            newArr.concat(flatten(i, false, newArr))
+            newArr.concat(flatten(i, false))
           } else {
             return i
           }
