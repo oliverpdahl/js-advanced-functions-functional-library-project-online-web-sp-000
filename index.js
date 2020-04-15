@@ -13,6 +13,7 @@ const fi = (function() {
     map: function() {
       const newCollection = (collection instanceof Array) ? [...collection] : Object.values(collection)
       for(const i of newCollection){ i = callback(i) }
+      return newCollection
     },
 
     reduce: function() {
