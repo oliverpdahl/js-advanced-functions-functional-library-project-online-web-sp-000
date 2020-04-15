@@ -96,8 +96,11 @@ const fi = (function() {
       (!array instanceof Array) ? return newArr.push(array)
       if(shallow){
         newArr = [].concat.apply([], newCollection)
+      } else {
+        for(let i of array){
+          this.flatten(val, false, newArr)
+        }
       }
-      return newArr
     },
 
     functions: function() {
