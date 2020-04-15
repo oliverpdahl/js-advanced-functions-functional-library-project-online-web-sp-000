@@ -59,7 +59,7 @@ const fi = (function() {
 
     first: function(collection, n){
       const newCollection = (collection instanceof Array) ? [...collection] : Object.values(collection)
-      let value = (n) ? collection.slice(n) : collection.slice(0)
+      let value = (!!n) ? collection.slice(n) : collection.slice(0)
       return value
     },
 
