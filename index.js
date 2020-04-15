@@ -100,6 +100,7 @@ const fi = (function() {
           newArr.concat((i instanceof Array) ? ...i : i)
         }
       }
+      return newArr
     }
 
     functions: function() {
