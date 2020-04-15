@@ -55,7 +55,7 @@ const fi = (function() {
       let value = 0;
       for(const i of newCollection){ value++}
       return value
-    }
+    },
 
     functions: function() {
 
