@@ -105,7 +105,7 @@ const fi = (function() {
     },
 
     uniq: function(array, isSorted, callback){
-      let newArr = []
+      let newArr = [array[0]]
       let sortedArray = [...array]
       if(!isSorted){
         sortedArray = sortedArray.sort(function(a,b) {return a - b})
