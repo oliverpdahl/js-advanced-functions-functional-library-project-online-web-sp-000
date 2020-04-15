@@ -96,13 +96,14 @@ const fi = (function() {
       const newCollection = (array instanceof Array) ? [...array] : Object.values(array)
       let newArr = []
       if(shallow){
-        for(const i of array){
-          if(i instanceof Array){
-            newArr.concat(...i);
-          } else {
-            newArr.push(i)
-          }
-        }
+        // for(const i of array){
+        //   if(i instanceof Array){
+        //     newArr.concat(...i);
+        //   } else {
+        //     newArr.push(i)
+        //   }
+        // }
+        newArr = [].concat.apply([], array)
       }
       return newArr
     },
