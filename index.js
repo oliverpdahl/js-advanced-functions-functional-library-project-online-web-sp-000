@@ -106,10 +106,14 @@ const fi = (function() {
 
     uniq: function(array, isSorted, callback){
       let newArr = []
-      let sortedArray = []
+      let sortedArray = [...array]
       if(!isSorted){
-        sortedArray = this.sortBy(array, i => return i)
+        sortedArray = this.sortBy(sortedArray, i => return i)
       }
+      for(let i = 0; i < sortedArray.length; i++){
+        if (sortedArray[i-1] !== sortedArray[i]) newArr.push(i)
+      }
+      return newArr
     },
 
     functions: function() {
