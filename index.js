@@ -129,7 +129,7 @@ const fi = (function() {
           uniqVals.add(val)
         }
       }
-
+      newArr = Array.from(uniqVals)
       return newArr
     },
 
