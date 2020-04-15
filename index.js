@@ -95,7 +95,7 @@ const fi = (function() {
     flatten: function(array, shallow, newArr=[]){
       if (!array instanceof Array) return newArr.push(array)
       if(shallow){
-        newArr = [].concat.apply([], newCollection)
+        newArr = [].concat.apply([], array)
       } else {
         for(let i of array){
           flatten(i, false, newArr)
