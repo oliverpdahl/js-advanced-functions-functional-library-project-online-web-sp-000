@@ -98,7 +98,7 @@ const fi = (function() {
         newArr = [].concat.apply([], newCollection)
       } else {
         for(let i of array){
-          this.flatten(val, false, newArr)
+          this.flatten(i, false, newArr)
         }
       }
     },
