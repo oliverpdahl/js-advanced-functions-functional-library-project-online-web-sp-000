@@ -101,6 +101,7 @@ const fi = (function() {
           this.flatten(i, false, newArr)
         }
       }
+      return newArr
     },
 
     functions: function() {
