@@ -57,6 +57,11 @@ const fi = (function() {
       return value
     },
 
+    first: function(collection){
+      const newCollection = (collection instanceof Array) ? [...collection] : Object.values(collection)
+      return collection[0]
+    }
+
     functions: function() {
 
     },
