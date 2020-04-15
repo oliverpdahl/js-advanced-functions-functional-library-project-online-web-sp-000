@@ -60,20 +60,20 @@ const fi = (function() {
     first: function(collection, number){
       const newCollection = (collection instanceof Array) ? [...collection] : Object.values(collection)
       if(number){
-        return collection.slice(0, number)
+        return newCollection.slice(0, number)
       }
       else {
-        return collection[0]
+        return newCollection[0]
       }
     },
 
     last: function(collection, number){
       const newCollection = (collection instanceof Array) ? [...collection] : Object.values(collection)
       if(number){
-        return collection.slice(-number)
+        return newCollection.slice(-number)
       }
       else {
-        return collection[-1]
+        return newCollection[-1]
       }
     },
 
