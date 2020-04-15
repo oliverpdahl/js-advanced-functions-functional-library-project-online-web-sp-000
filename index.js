@@ -5,7 +5,7 @@ const fi = (function() {
     },
 
     each: function(collection, callback) {
-      for(const i in collection) {callback(i)}
+      newCollection = collection instanceof Array ? [...collection] : collection.values
     },
 
     map: function() {
