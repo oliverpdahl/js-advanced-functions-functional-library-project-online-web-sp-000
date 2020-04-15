@@ -101,7 +101,7 @@ const fi = (function() {
           if(i instanceof Array){
             newArr.concat(flatten(i, false, newArr))
           } else {
-            newArr.push(i)
+            return i
           }
         }
       }
