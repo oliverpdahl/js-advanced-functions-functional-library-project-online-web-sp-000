@@ -59,7 +59,7 @@ const fi = (function() {
 
     first: function(collection, number){
       const newCollection = (collection instanceof Array) ? [...collection] : Object.values(collection)
-      if number instanceof Number{
+      if(number instanceof Number){
         return collection.slice(0, number)
       }
       else {
