@@ -39,6 +39,18 @@ const fi = (function() {
       return value
     },
 
+    filter: (collection, predicate){
+      const newCollection = (collection instanceof Array) ? [...collection] : Object.values(collection)
+      let value = []
+      for(let i = 0; i < newCollection.length; i++){
+        if(predicate(newCollection[i])){
+          value.push(newCollection[i])
+          break;
+        }
+      }
+      return value
+    }
+
     functions: function() {
 
     },
