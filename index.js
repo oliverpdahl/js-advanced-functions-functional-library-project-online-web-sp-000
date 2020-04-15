@@ -5,8 +5,7 @@ const fi = (function() {
     },
 
     each: function(collection, callback) {
-      let newCollection = []
-      collection instanceof Array ? newCollection = [...collection] : newCollection = collection.values
+      const newCollection = (collection instanceof Array) ? [...collection] : Object.values(collection)
       for(const i of newCollection){ callback(i)}
     },
 
