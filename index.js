@@ -29,13 +29,13 @@ const fi = (function() {
 
     find: function(collection, predicate){
       const newCollection = (collection instanceof Array) ? [...collection] : Object.values(collection)
-      let returnTrue = function(i){
-        if(i === predicate){
-          // return i;
+      let value
+      for(let i = 0; i < newCollection.length; i++){
+        if(newCollection[i] === predicate){
+          value = newCollection[i]
           break;
         }
       }
-      for(const i of newCollection){ returnTrue(i)}
     },
 
     functions: function() {
