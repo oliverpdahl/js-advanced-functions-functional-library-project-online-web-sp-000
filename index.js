@@ -108,7 +108,7 @@ const fi = (function() {
       let newArr = []
       let sortedArray = []
       if(!isSorted){
-        sortedArray = this.sort(array)
+        sortedArray = this.sortBy(array, i => return i)
       }
     },
 
