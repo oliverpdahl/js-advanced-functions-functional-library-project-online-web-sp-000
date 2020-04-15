@@ -87,6 +87,12 @@ const fi = (function() {
       return noFalse
     },
 
+    sortBy: function(array, callback){
+      let newArr = [...array];
+      newArr.sort(callback)
+      return newArr
+    },
+
     functions: function() {
 
     },
