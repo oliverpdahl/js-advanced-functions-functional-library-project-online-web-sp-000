@@ -10,9 +10,9 @@ const fi = (function() {
       return collection
     },
 
-    map: function() {
+    map: function(collection, callback) {
       const newCollection = (collection instanceof Array) ? [...collection] : Object.values(collection)
-      for(const i of newCollection){ i = callback(i) }
+      for(let i of newCollection){ i = callback(i) }
       return newCollection
     },
 
