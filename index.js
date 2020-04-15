@@ -33,6 +33,7 @@ const fi = (function() {
       for(let i = 0; i < newCollection.length; i++){
         if(predicate(newCollection[i])){
           value = newCollection[i]
+          break;
         }
       }
       return value
@@ -44,7 +45,6 @@ const fi = (function() {
       for(let i = 0; i < newCollection.length; i++){
         if(predicate(newCollection[i])){
           value.push(newCollection[i])
-          break;
         }
       }
       return value
