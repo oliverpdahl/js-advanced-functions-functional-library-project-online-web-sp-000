@@ -131,8 +131,8 @@ const fi = (function() {
 
     keys: function(object){
       let arr = []
-      for(const key in obj){
-        arr.push(obj[key])
+      for(const key in object){
+        arr.push(object[key])
       }
       return arr
     },
